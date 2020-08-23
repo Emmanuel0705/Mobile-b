@@ -12,7 +12,7 @@ const Main = ({ user }) => {
       {user.loggedIn ? (
         <Fragment>
           <Header />
-          <Home />{" "}
+          <Home />
         </Fragment>
       ) : (
         <Login />
