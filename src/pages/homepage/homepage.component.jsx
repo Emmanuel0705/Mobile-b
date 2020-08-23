@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import { logout } from "../../redux/user/user.actions";
 import { withRouter } from "react-router-dom";
-import { clear } from "../../redux/user/user.actions";
-const HomePage = ({ user, history }) => {
+
+const HomePage = ({ logout }) => {
   return (
     <div id="appCapsule">
       <div
@@ -14,7 +14,17 @@ const HomePage = ({ user, history }) => {
           <div class="balance">
             <div class="left">
               <span class="title">Total Balance</span>
-              <h1 class="total">$ 2,562.50</h1>
+              <h1 class="total">$ 250,000.00</h1>
+            </div>
+            <div class="right">
+              <span class="title">Logout</span>
+              <h1
+                style={{ cursor: "pointer" }}
+                class="total"
+                onClick={() => logout()}
+              >
+                <ion-icon name="log-out"></ion-icon>
+              </h1>
             </div>
           </div>
 
@@ -84,14 +94,20 @@ const HomePage = ({ user, history }) => {
                       </label>
                       <p>1738929447</p>
                     </div>
-                  </div>
-
-                  <div class="form-group basic">
                     <div class="input-wrapper">
                       <label class="label" for="text11d">
                         Account Name
                       </label>
                       <p>Bettymclennan</p>
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                    <div class="input-wrapper">
+                      <label class="label" for="text11d">
+                        Attached Email
+                      </label>
+                      <p>Betty7238@gmail.com</p>
                       <i class="clear-input">
                         <ion-icon name="close-circle"></ion-icon>
                       </i>
@@ -113,7 +129,7 @@ const HomePage = ({ user, history }) => {
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Send Money</h5>
+              <h5 class="modal-title">Transfer Fund</h5>
             </div>
             <div class="modal-body">
               <div class="action-sheet-content">
@@ -170,7 +186,7 @@ const HomePage = ({ user, history }) => {
                       class="btn btn-primary btn-block btn-lg"
                       data-dismiss="modal"
                     >
-                      Send
+                      Transfer
                     </button>
                   </div>
                 </form>
@@ -269,24 +285,19 @@ const HomePage = ({ user, history }) => {
         <div class="row mt-2">
           <div class="col-12 mb-2">
             <div class="stat-box">
-              <div class="title">Income</div>
-              <div class="value text-success">$ 552.95</div>
+              <div class="title">
+                <b>Full Name</b>
+              </div>
+              <div class="value ">Betty Mclennan</div>
             </div>
           </div>
           <div class="col-12 mb-2">
             <div class="stat-box">
-              <div class="title">Total Bills</div>
-              <div class="value">$ 53.25</div>
+              <div class="title">Email</div>
+              <div class="value">Betty7238@gmail.com</div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="appFooter">
-        <div class="footer-title">
-          Copyright © Finapp 2020. All Rights Reserved.
-        </div>
-        Bootstrap 4 based mobile template.
       </div>
     </div>
   );
@@ -295,7 +306,6 @@ const mapStateToProps = (state) => ({
   user: state.user.user,
 });
 const mapdisToProps = (dis) => ({
-  clear: () => dis(clear()),
+  logout: () => dis(logout()),
 });
-
 export default connect(mapStateToProps, mapdisToProps)(withRouter(HomePage));
