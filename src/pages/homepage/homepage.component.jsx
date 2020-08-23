@@ -98,7 +98,7 @@ const HomePage = ({ logout }) => {
                       <label class="label" for="text11d">
                         Account Name
                       </label>
-                      <p>Bettymclennan</p>
+                      <p>Betty Mclennan</p>
                       <i class="clear-input">
                         <ion-icon name="close-circle"></ion-icon>
                       </i>
