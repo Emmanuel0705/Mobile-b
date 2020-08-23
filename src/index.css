@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0 !important;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ul-div {
+  width: 70%;
+  box-shadow: 2px 4p 6px #ccc;
+  border: 1px solid #ccc;
+  margin: auto;
+}
+.ul-div h3 {
+  float: right;
+  padding: 10px;
+}
+.ul-div ul {
+  text-decoration: none;
+  list-style-type: none;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+.ul-div h2 {
+  text-align: center;
+  width: 100%;
+}
