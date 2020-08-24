@@ -135,7 +135,7 @@ const HomePage = ({ logout }) => {
                       <label class="label" for="text11d">
                         Attached Email
                       </label>
-                      <p>Betty7238@gmail.com</p>
+                      <p>Betty7238@outlook.com</p>
                       <i class="clear-input">
                         <ion-icon name="close-circle"></ion-icon>
                       </i>
@@ -165,26 +165,43 @@ const HomePage = ({ logout }) => {
                   <div class="form-group basic">
                     <div class="input-wrapper">
                       <label class="label" for="account2">
-                        From
+                        Beneficiary Bank
                       </label>
-                      <select class="form-control custom-select" id="account2">
-                        <option value="0">Savings (*** 5019)</option>
-                        <option value="1">Investment (*** 6212)</option>
-                        <option value="2">Mortgage (*** 5021)</option>
-                      </select>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="text11"
+                        placeholder="Enter beneficiary Bank"
+                      />
                     </div>
                   </div>
 
                   <div class="form-group basic">
                     <div class="input-wrapper">
                       <label class="label" for="text11">
-                        To
+                        Beneficiary Acc.
                       </label>
                       <input
                         type="email"
                         class="form-control"
                         id="text11"
-                        placeholder="Enter bank ID"
+                        placeholder="Enter beneficiary account"
+                      />
+                      <i class="clear-input">
+                        <ion-icon name="close-circle"></ion-icon>
+                      </i>
+                    </div>
+                  </div>
+                  <div class="form-group basic">
+                    <div class="input-wrapper">
+                      <label class="label" for="text11">
+                        Beneficiary Name.
+                      </label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="text11"
+                        placeholder="Enter beneficiary name"
                       />
                       <i class="clear-input">
                         <ion-icon name="close-circle"></ion-icon>
@@ -323,7 +340,7 @@ const HomePage = ({ logout }) => {
           <div class="col-12 mb-2">
             <div class="stat-box">
               <div class="title">Email</div>
-              <div class="value">Betty7238@gmail.com</div>
+              <div class="value">Betty7238@outlook.com</div>
             </div>
           </div>
         </div>
