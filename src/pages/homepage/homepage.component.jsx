@@ -2,10 +2,38 @@ import React from "react";
 import { connect } from "react-redux";
 import { logout } from "../../redux/user/user.actions";
 import { withRouter } from "react-router-dom";
+import { useState } from "react";
+import Modal from "@material-ui/core/Modal";
+// import Spinner from "../../components/spinner/spinner.component";
+import Progress from "../../components/Progress";
+import OTP from "../../components/otp";
 
 const HomePage = ({ logout }) => {
+  const [modal, setModal] = useState(false);
+  const [otp, setOTP] = useState(false);
+  const handleTransfer = () => {
+    setModal(true);
+    setTimeout(() => {
+      setModal(false);
+      setOTP(true);
+    }, 8000);
+  };
   return (
     <div id="appCapsule">
+      <Modal
+        open={modal}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+      >
+        <Progress />
+      </Modal>
+      <Modal
+        open={otp}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+      >
+        <OTP />
+      </Modal>
       <div
         class="section wallet-card-section pt-4"
         style={{ paddingTop: "40px" }}
@@ -185,6 +213,7 @@ const HomePage = ({ logout }) => {
                       type="button"
                       class="btn btn-primary btn-block btn-lg"
                       data-dismiss="modal"
+                      onClick={() => handleTransfer()}
                     >
                       Transfer
                     </button>
