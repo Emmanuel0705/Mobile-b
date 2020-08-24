@@ -3,7 +3,6 @@ import React, { Fragment } from "react";
 import { SpinnerOverlay } from "../spinner/spinner.styles";
 import { Card } from "@material-ui/core";
 import { useState } from "react";
-import Spinner from "../spinner/spinner.component";
 import Progress from "../Progress";
 
 function OTP() {
