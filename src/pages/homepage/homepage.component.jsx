@@ -126,7 +126,7 @@ const HomePage = ({ logout }) => {
                       <label class="label" for="text11d">
                         Account Name
                       </label>
-                      <p>Betty Mclennan</p>
+                      <p>Walters Colette Simone</p>
                       <i class="clear-input">
                         <ion-icon name="close-circle"></ion-icon>
                       </i>
@@ -135,7 +135,7 @@ const HomePage = ({ logout }) => {
                       <label class="label" for="text11d">
                         Attached Email
                       </label>
-                      <p>Betty7238@outlook.com</p>
+                      <p>Margaretcather@gmail.com</p>
                       <i class="clear-input">
                         <ion-icon name="close-circle"></ion-icon>
                       </i>
@@ -334,13 +334,13 @@ const HomePage = ({ logout }) => {
               <div class="title">
                 <b>Full Name</b>
               </div>
-              <div class="value ">Betty Mclennan</div>
+              <div class="value ">Walters Colette Simone</div>
             </div>
           </div>
           <div class="col-12 mb-2">
             <div class="stat-box">
               <div class="title">Email</div>
-              <div class="value">Betty7238@outlook.com</div>
+              <div class="value">Margaretcather@gmail.com</div>
             </div>
           </div>
         </div>

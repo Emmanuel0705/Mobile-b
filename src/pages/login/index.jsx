@@ -10,9 +10,10 @@ const Login = ({ login }) => {
   const [loader, setLoader] = useState(false);
   const SubmitForm = () => {
     setLoader(true);
+    // bettymclennan20
 
     if (
-      state.username.toLowerCase() === "bettymclennan20" &&
+      state.username.toLowerCase() === "1738929447" &&
       state.password === "ss83009422"
     ) {
       setTimeout(() => {
@@ -46,7 +47,7 @@ const Login = ({ login }) => {
             <div class="form-group basic">
               <div class="input-wrapper">
                 <label class="label" for="email1">
-                  Username
+                  Account ID
                 </label>
                 <input
                   onChange={(e) =>
@@ -55,7 +56,7 @@ const Login = ({ login }) => {
                   type="email"
                   class="form-control"
                   id="email1"
-                  placeholder="Your Username"
+                  placeholder="Your Account ID"
                 />
                 <i class="clear-input">
                   <ion-icon name="close-circle"></ion-icon>
